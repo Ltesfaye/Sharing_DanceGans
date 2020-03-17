@@ -1,0 +1,25 @@
+.DS_Store
+__pycache__/
+trainvideos/
+Example Cooding Video/
+danceGANs_v2/__pycache__
+danceGANs_v2/trainvideos
+danceGANs_v3/__pycache__
+danceGANs_v3/trainvideos
+tf_updated/trainvideos
+tf_updated/best_g_loss
+tf_updated/save_last_output
+tf_updated/training_checkpoints
+tf_updated_v2/trainvideos
+tf_updated_v2/training_checkpoints
+tf_updated_v2/genvideos
+tf_updated/genvideos
+new_tf_model_design/ballet
+new_tf_model_design/genvideos
+new_tf_model_design/gengifs
+new_tf_model_design/training_checkpoints
+
+new_tf_model_gen2/ballet
+new_tf_model_gen2/gengifs
+new_tf_model_gen2/training_checkpoints
+

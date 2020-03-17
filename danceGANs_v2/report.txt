@@ -1,0 +1,149 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 3 files
+Detected 10 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: danceGANs/model.py
+--------------------------------------------------------------------------------
+danceGANs/model.py:92:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: danceGANs/utils.py
+--------------------------------------------------------------------------------
+danceGANs/utils.py:63:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:65:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:72:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:84:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:94:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:96:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:103:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:115:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+danceGANs/utils.py:131:11: ERROR: Using member tf.contrib.layers.batch_norm in deprecated module tf.contrib. tf.contrib.layers.batch_norm cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'danceGANs/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'danceGANs/model.py'
+ outputting to 'danceGANs_v2/model.py'
+--------------------------------------------------------------------------------
+
+36:17: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+37:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+38:26: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+43:22: INFO: Added keywords to args of function 'tf.reduce_mean'
+44:22: INFO: Added keywords to args of function 'tf.reduce_mean'
+45:22: INFO: Added keywords to args of function 'tf.reduce_mean'
+45:147: INFO: Added keywords to args of function 'tf.norm'
+49:18: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+49:36: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+50:18: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+50:36: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+51:21: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+52:21: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+54:16: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+58:21: INFO: Renamed 'tf.train.import_meta_graph' to 'tf.compat.v1.train.import_meta_graph'
+62:12: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+92:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+97:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+100:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+102:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+104:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+106:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+108:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+113:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+115:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+117:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+119:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+123:19: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+126:25: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+138:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+141:20: INFO: Renamed 'tf.layers.conv3d' to 'tf.compat.v1.layers.conv3d'
+143:20: INFO: Renamed 'tf.layers.conv3d' to 'tf.compat.v1.layers.conv3d'
+145:20: INFO: Renamed 'tf.layers.conv3d' to 'tf.compat.v1.layers.conv3d'
+147:20: INFO: Renamed 'tf.layers.conv3d' to 'tf.compat.v1.layers.conv3d'
+149:20: INFO: Renamed 'tf.layers.conv3d' to 'tf.compat.v1.layers.conv3d'
+155:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+159:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+161:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+163:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+165:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+167:23: INFO: Renamed 'tf.layers.conv2d_transpose' to 'tf.compat.v1.layers.conv2d_transpose'
+172:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+174:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+176:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+178:22: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+182:19: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+185:25: INFO: Renamed 'tf.layers.conv3d_transpose' to 'tf.compat.v1.layers.conv3d_transpose'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'danceGANs/utils.py'
+ outputting to 'danceGANs_v2/utils.py'
+--------------------------------------------------------------------------------
+
+62:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+63:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+63:12: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+63:92: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+63:92: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+64:15: INFO: Added keywords to args of function 'tf.nn.conv2d'
+64:15: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+65:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+65:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+65:69: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+65:69: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+70:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+72:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+72:12: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+73:30: INFO: tf.random_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+73:30: INFO: Renamed 'tf.random_normal_initializer' to 'tf.compat.v1.random_normal_initializer'
+84:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+84:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+84:75: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+84:75: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+93:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+94:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+94:12: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+94:96: INFO: tf.truncated_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+94:96: INFO: Renamed 'tf.truncated_normal_initializer' to 'tf.compat.v1.truncated_normal_initializer'
+95:15: INFO: Added keywords to args of function 'tf.nn.conv2d'
+95:15: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+96:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+96:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+96:69: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+96:69: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+101:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+103:12: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+103:12: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+104:30: INFO: tf.random_normal_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+104:30: INFO: Renamed 'tf.random_normal_initializer' to 'tf.compat.v1.random_normal_initializer'
+115:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+115:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+115:75: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+115:75: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+125:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+131:11: ERROR: Using member tf.contrib.layers.batch_norm in deprecated module tf.contrib. tf.contrib.layers.batch_norm cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'danceGANs/main.py'
+ outputting to 'danceGANs_v2/main.py'
+--------------------------------------------------------------------------------
+
+30:17: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+33:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+39:4: INFO: Renamed 'tf.app.run' to 'tf.compat.v1.app.run'
+--------------------------------------------------------------------------------
+
