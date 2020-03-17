@@ -23,4 +23,5 @@ If the number of frames/video-size flag is changed, modify it directly in the pa
 ## Project Structure
 
 danceGANs_v1, tf_updated_v2 - Python 2, Tensorflow 1
+
 Everything else - Python 3, Tensorflow 2
